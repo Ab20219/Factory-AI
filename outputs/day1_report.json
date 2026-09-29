@@ -1,0 +1,80 @@
+{
+  "day": 1,
+  "generated_at": "2026-09-29 17:57:58",
+  "installed": [
+    "torch==2.14.0+cpu",
+    "torchvision==0.29.0+cpu",
+    "ultralytics==8.4.165",
+    "opencv-python==5.0.0.93",
+    "numpy==2.5.2",
+    "pillow==12.3.0"
+  ],
+  "hardware_detected": {
+    "platform": "Linux-5.10.134-013.15.kangaroo.al8.x86_64-x86_64-with-glibc2.41",
+    "cpu_count_logical": 2,
+    "python_version": "3.12.14"
+  },
+  "python_version": "3.12.14",
+  "ultralytics_version": "8.4.165",
+  "yolo_model": "yolo26n.pt (80 COCO classes, ~5.3 MB)",
+  "device_used": "cpu (CUDA not available)",
+  "image_test": {
+    "source": "images/test/bus.jpg",
+    "image_shape_hw": [
+      1080,
+      810
+    ],
+    "detections": "1 bus + 4 persons",
+    "confidence_range": "0.66 - 0.88",
+    "inference_ms_warm": 57.1
+  },
+  "video_test": {
+    "source": "videos/test/people-detection.mp4",
+    "resolution": "432x768",
+    "frames_processed": 596,
+    "avg_inference_ms_per_frame": 47.42,
+    "fps_inference_only": 21.09,
+    "fps_wall_including_io": 18.09,
+    "wall_time_s": 32.95
+  },
+  "webcam_result": "WEBCAM TEST SKIPPED (no /dev/video0 in sandbox)",
+  "approximate_fps": {
+    "image_warm_mean": 14.48,
+    "video_inference_only": 21.09,
+    "video_wall_including_io": 18.09
+  },
+  "files_created_count": 13,
+  "files_created": [
+    "README.md",
+    "images/test/bus.jpg",
+    "outputs/benchmark_results.json",
+    "outputs/image_test/detect/bus.jpg",
+    "outputs/image_test/first_test_bus.jpg",
+    "requirements.txt",
+    "scripts/benchmark.py",
+    "scripts/check_environment.py",
+    "scripts/detect.py"
+  ],
+  "errors_encountered": [
+    "First attempt: pip install ultralytics pulled CUDA wheels (nvidia-cublas, nvidia-cudnn-cu13) and ran out of disk. Fix: install torch CPU build first from --index-url https://download.pytorch.org/whl/cpu.",
+    "Ultralytics default project= path was resolved under /home/z/my-project/runs/. Fix: detect.py uses PROJECT_ROOT/outputs/<kind>_test as an absolute project path."
+  ],
+  "current_limitations": [
+    "Pretrained COCO model: no PPE / fire / smoke detection",
+    "No tracking",
+    "No event engine",
+    "No FastAPI server",
+    "No database",
+    "No dashboard",
+    "No alerts (SMS/email/siren)",
+    "Webcam not available in sandbox"
+  ],
+  "day2_objectives": [
+    "PPE dataset preparation (Hard Hat Workers / SHEL5K)",
+    "Fire/smoke dataset preparation (D-Fire / FASDD)",
+    "Dataset structure: datasets/{ppe,fire_smoke}/{images,labels}/{train,val}",
+    "Class definitions: helmet, no-helmet, vest, no-vest, gloves / fire, smoke",
+    "data.yaml files for YOLO training",
+    "Training will run on Colab or another GPU machine"
+  ]
+}

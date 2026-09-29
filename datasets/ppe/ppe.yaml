@@ -1,0 +1,40 @@
+# PS6 - PPE Dataset Configuration (YOLO format)
+#
+# IMPORTANT: Update the `path` field below to the absolute path of
+# this dataset on YOUR machine. The current path is for the
+# sandbox where this file was generated. If you copy this project
+# to a different machine (e.g. your Intel UHD laptop or Colab),
+# update `path:` accordingly.
+#
+# Train command (Day 3, on a GPU machine):
+#   yolo train model=yolo26n.pt data=datasets/ppe/ppe.yaml \
+#        epochs=100 imgsz=640 device=0
+#
+# Or via Python:
+#   from ultralytics import YOLO
+#   YOLO("yolo26n.pt").train(data="datasets/ppe/ppe.yaml",
+#                            epochs=100, imgsz=640, device=0)
+
+# Update this to the absolute path on your machine:
+path: /home/z/my-project/PS6-Safety-AI/datasets/ppe
+
+train: images/train
+val: images/val
+test: images/test
+
+# Day 2 MVP — only `person` class is labeled in this run.
+# Helmet / no_helmet / safety_vest / no_safety_vest / gloves are
+# DEFERRED pending a manually annotated source dataset
+# (Hard Hat Workers v2 or GDUT-HD). See datasets/DATASET_REPORT.md
+# for the rationale.
+names:
+  0: person
+
+# Full target schema (Day 3+, when proper source data is sourced):
+# names:
+#   0: person
+#   1: helmet
+#   2: no_helmet
+#   3: safety_vest
+#   4: no_safety_vest
+#   5: gloves

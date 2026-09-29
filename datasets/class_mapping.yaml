@@ -1,0 +1,47 @@
+# PS6 Day 2 - Class Mapping
+#
+# Documents how source-dataset classes map to our final target classes.
+# Used by validate_dataset.py and visualize_dataset.py.
+#
+# Format:
+#   <dataset>:
+#     <source_class>: <target_class_or_status>
+
+ppe:
+  # Wikimedia Commons search-query -> target class
+  person: person
+  helmet: helmet         # DEFERRED - no auto-labeling
+  no_helmet: no_helmet   # DEFERRED - no auto-labeling
+  safety_vest: safety_vest   # DEFERRED - no COCO class
+  no_safety_vest: no_safety_vest   # DEFERRED
+  gloves: gloves         # DEFERRED - no COCO class
+  # COCO standard class index 0
+  coco_person_idx: 0
+  # Final MVP target classes (only these are labeled in this run)
+  target_classes_mvp:
+    0: person
+  # Full target (Day 3+ will require manual annotation or Hard Hat Workers v2)
+  target_classes_full:
+    0: person
+    1: helmet
+    2: no_helmet
+    3: safety_vest
+    4: no_safety_vest
+    5: gloves
+
+fire_smoke:
+  # Wikimedia search-query classes -> target class
+  fire: fire
+  smoke: smoke
+  # Matches D-Fire class indices exactly (so user can swap in D-Fire unchanged)
+  target_classes:
+    0: fire
+    1: smoke
+
+deferred:
+  ppe:
+    helmet: "Requires manually annotated PPE source (Hard Hat Workers v2 / GDUT-HD). Auto-labeling cannot distinguish helmet from no_helmet from COCO."
+    no_helmet: "Same as helmet - requires manual annotation."
+    safety_vest: "No COCO class for safety vest. Use GDUT-HD or manually label."
+    no_safety_vest: "Same as safety_vest."
+    gloves: "No COCO class for gloves. Only GDUT-HD has glove annotations among open datasets known."

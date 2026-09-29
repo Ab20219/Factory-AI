@@ -1,0 +1,60 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+.venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+.python-version
+
+# --- OS ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- IDE / Editor ---
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+
+# --- Project: ML / Detection artifacts ---
+# Keep the small demo model (yolo26n.pt ~5 MB) so the project is restartable.
+# Exclude future large checkpoints / training-run outputs.
+models/runs/
+models/*.pth
+models/*_last.pt
+models/*_best.pt
+!models/yolo26n.pt
+
+# Keep demo datasets (small, ~10 MB total). Future large datasets like
+# D-Fire (~1 GB) or Hard Hat Workers v2 (~500 MB) should be excluded
+# manually when added (or use Git LFS).
+datasets/raw/**/*.zip
+datasets/raw/**/*.tar
+datasets/raw/**/*.tar.gz
+
+# Ultralytics regenerates runs/ on every inference - exclude
+runs/
+
+# --- Ultralytics config (machine-local) ---
+*.config
+settings.json
+
+# --- Logs / profiles ---
+*.log
+logs/
+pip-log.txt
+.profile_data/
+
+# --- Jupyter ---
+.ipynb_checkpoints/
+*.ipynb_checkpoints

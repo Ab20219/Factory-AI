@@ -1,0 +1,23 @@
+# PS6 - Fire/Smoke Dataset Configuration (YOLO format)
+#
+# IMPORTANT: Update the `path` field below to the absolute path of
+# this dataset on YOUR machine. The current path is for the
+# sandbox where this file was generated.
+#
+# Train command (Day 3, on a GPU machine):
+#   yolo train model=yolo26n.pt data=datasets/fire_smoke/fire_smoke.yaml \
+#        epochs=100 imgsz=640 device=0
+#
+# Class indices match D-Fire (0=fire, 1=smoke) so the user can swap
+# in D-Fire as the production dataset without renumbering.
+
+# Update this to the absolute path on your machine:
+path: /home/z/my-project/PS6-Safety-AI/datasets/fire_smoke
+
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: fire
+  1: smoke

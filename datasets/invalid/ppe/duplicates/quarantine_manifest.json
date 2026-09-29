@@ -1,0 +1,8 @@
+[
+  {
+    "file": "p005.jpg",
+    "from_split": "test",
+    "reason": "near_duplicate_perceptual_hash",
+    "moved_to": "/home/z/my-project/PS6-Safety-AI/datasets/invalid/ppe/duplicates/test_p005.jpg"
+  }
+]

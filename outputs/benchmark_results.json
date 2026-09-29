@@ -1,0 +1,39 @@
+{
+  "env": {
+    "python": "3.12.14",
+    "ultralytics": "8.4.165",
+    "opencv": "5.0.0",
+    "torch": "2.14.0+cpu",
+    "cuda_available": false,
+    "num_threads": 1,
+    "platform": "Linux-5.10.134-013.15.kangaroo.al8.x86_64-x86_64-with-glibc2.41",
+    "device_used": "cpu"
+  },
+  "model": {
+    "path": "/home/z/my-project/PS6-Safety-AI/models/yolo26n.pt",
+    "load_ms": 39.62,
+    "num_classes": 80
+  },
+  "image": {
+    "path": "/home/z/my-project/PS6-Safety-AI/images/test/bus.jpg",
+    "height": 1080,
+    "width": 810
+  },
+  "inference": {
+    "imgsz": 640,
+    "warmup_runs": 3,
+    "measured_runs": 30,
+    "wall_ms_mean": 69.08,
+    "wall_ms_median": 69.4,
+    "wall_ms_stdev": 1.56,
+    "wall_ms_min": 64.98,
+    "wall_ms_max": 71.17,
+    "fps_mean_wall": 14.48,
+    "ultralytics_last_speed_ms": {
+      "preprocess": 3.38,
+      "inference": 57.1,
+      "postprocess": 0.7,
+      "total": 61.18
+    }
+  }
+}

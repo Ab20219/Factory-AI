@@ -1,0 +1,42 @@
+{
+  "dataset": "ppe",
+  "expected_classes": {
+    "0": "person"
+  },
+  "per_split": {
+    "train": {
+      "images": 14,
+      "labels": 14,
+      "class_counts": {
+        "0": 31
+      },
+      "invalid_images": 0,
+      "total_errors": 0
+    },
+    "val": {
+      "images": 2,
+      "labels": 2,
+      "class_counts": {
+        "0": 2
+      },
+      "invalid_images": 0,
+      "total_errors": 0
+    },
+    "test": {
+      "images": 1,
+      "labels": 1,
+      "class_counts": {
+        "0": 1
+      },
+      "invalid_images": 0,
+      "total_errors": 0
+    }
+  },
+  "overall_class_counts": {
+    "0": 34
+  },
+  "duplicate_pairs": [],
+  "total_errors": 0,
+  "errors_sample": [],
+  "status": "PASS"
+}

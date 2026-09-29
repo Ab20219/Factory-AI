@@ -1,0 +1,15 @@
+{
+  "fire_smoke": {
+    "fire": 10,
+    "smoke": 10
+  },
+  "ppe": {
+    "person": 43,
+    "images_with_no_person": 6,
+    "images_skipped": 0
+  },
+  "notes": [
+    "PPE 'helmet' / 'no_helmet' / 'safety_vest' / 'gloves' classes are DEFERRED pending a manually annotated source dataset (Hard Hat Workers v2 or GDUT-HD). Auto-labeling cannot reliably distinguish these classes from COCO.",
+    "Fire/smoke labels are whole-image bboxes; the ground truth label comes from the Wikimedia search query. This is suitable for pipeline validation but should be replaced with D-Fire for production training."
+  ]
+}
